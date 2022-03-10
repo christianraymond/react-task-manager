@@ -1,13 +1,13 @@
 import PropTypes from "prop-types";
 
-const Button = ({ textBtn, color, onAddTask }) => {
+const Button = ({ textBtn, color, onAddTask, showCLoseEvent }) => {
   return (
     <button
       className="btn"
       onClick={onAddTask}
       style={{ backgroundColor: color }}
     >
-      {textBtn}
+      {showCLoseEvent ? 'Close' : textBtn}
     </button>
   );
 };
