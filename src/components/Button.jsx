@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 
-const Button = ({ textBtn, color, handleClick }) => {
+const Button = ({ textBtn, color, onAddTask }) => {
   return (
     <button
       className="btn"
-      onClick={handleClick}
+      onClick={onAddTask}
       style={{ backgroundColor: color }}
     >
       {textBtn}
@@ -19,7 +19,7 @@ Button.defaultProps = {
 Button.prototype = {
   color: PropTypes.string,
   textBtn: PropTypes.string,
-  handleClick: PropTypes.func.isRequired,
+  onAddTask: PropTypes.func.isRequired,
 };
 
 export default Button;
